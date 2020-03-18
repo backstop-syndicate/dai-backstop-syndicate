@@ -47,6 +47,7 @@
     "gen:contract-typings": "rm -f typings/contracts/* && typechain --target ethers --outDir typings/contracts './build/contracts/*.json'",
     "start": "./node_modules/.bin/ganache-cli --gasLimit 10000000 -e 10000 2>&1 > ganache-output.log & echo 'local chain started.'",
     "test": "tsc -b && truffle test --network ganache build/*.spec.js",
+    "coverage": "truffle run coverage --temp build --file='./build/*.spec.js'",
     "stop": "kill -9 \"$(ps -ax | grep -m1 '[n]ode ./node_modules/.bin/ganache-cli' | awk '{print $1;}')\" && echo 'local chain stopped.'",
     "prettier": "prettier --write"
   },
