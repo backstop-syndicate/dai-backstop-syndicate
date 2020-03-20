@@ -18,7 +18,7 @@ interface IFlopper {
         uint48 end
     );
 
-    // DAI contract address
+    // DSS core accounting contract address
     function vat() external view returns (address);
     // MKR contract address
     function gem() external view returns (address);
